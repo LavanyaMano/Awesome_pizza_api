@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+class Pizza(models.Model):
+    pizza_name = models.CharField(max_length =20)
+    quantity = models.DecimalField(max_digits=10,decimal_places = 0)
+    price = models.DecimalField(max_digits=10,decimal_places = 2)
+
+    def __str__(self):
+        return self.pizza_name
+
+
